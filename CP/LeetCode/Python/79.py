@@ -13,14 +13,14 @@ class Solution:
         def dfs(r: int, c: int, index: int) -> bool:
             if index == len(word):
                 return True
-            if r < 0 or r >= rows or c < 0 or c >= cols or board[r][c] == '#':
+            if r < 0 or r >= rows or c < 0 or c >= cols or board[r][c] == "#":
                 return False
 
             if board[r][c] != word[index]:
                 return False
 
             temp = board[r][c]
-            board[r][c] = '#'
+            board[r][c] = "#"
 
             found = (
                 dfs(r + 1, c, index + 1) or dfs(r - 1, c, index + 1) or dfs(r, c + 1, index + 1) or dfs(r, c - 1, index + 1)
@@ -39,6 +39,6 @@ class Solution:
 
 if __name__ == "__main__":
     solution = Solution()
-    board = [['A', 'B', 'C', 'E'], ['S', 'F', 'C', 'S'], ['A', 'D', 'E', 'E']]
+    board = [["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]]
     word = "ABCCED"
     print(solution.exist(board, word))

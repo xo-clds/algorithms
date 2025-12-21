@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-
 bool dfs(char board[6][6], int boardSize, int *boardColSize, char *word, int wordIndex, int row, int col)
 {
     if (word[wordIndex] == '\0')
