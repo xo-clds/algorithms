@@ -33,16 +33,16 @@ class LRUCache {
         for (const [key, value] of this.cache.entries()) {
             arr.push(`[key=${key} value=${value}]`);
         }
-        console.log(`[${arr.join(", ")}]`);
+        console.log(`[${arr.join(', ')}]`);
     }
 }
 
 const cache = new LRUCache(5);
 
 for (let i = 1; i <= 5; i++) {
-  cache.put(i, i * 2 + 3);
+    cache.put(i, i * 2 + 3);
 }
 
 cache.display();
 
-console.log("Getting key 3:", cache.get(3));
+console.log('Getting key 3:', cache.get(3));
